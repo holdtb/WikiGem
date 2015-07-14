@@ -1,7 +1,6 @@
 require 'json'
 require 'pry'
 class WikiParser
-
   def self.get_title(raw_json)
     parsed = JSON.parse(raw_json)
     parsed["query"]["pages"].each do |page|
@@ -9,9 +8,4 @@ class WikiParser
     end
     @lead_text
   end
-
-  def self.get_content(raw_json)
-
-  end
-
 end

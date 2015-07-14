@@ -8,5 +8,4 @@ class WikiGetter
     json_result = RestClient.get "#{@end_point}#{search}"
     json_result
   end
-
 end
