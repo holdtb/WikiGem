@@ -1,17 +1,11 @@
 require 'thor'
-require_relative 'WikiParser'
-require_relative 'WikiGetter'
-require_relative 'SearchPrimer'
-
+require_relative 'WikiSearch'
 class WikiGem < Thor
   default_task :summary
 
   desc "summary", "Get the summary text from a wikipedia page"
   def summary(*search)
-    search_str = SearchPrimer.prime(search)
-    text = WikiParser.get_title(WikiGetter.get_page_as_json(search_str))
-    puts "#{search.join(" ").capitalize}:"
-    puts text
+    WikiSearch.find(search)
   end
 
   def method_missing(method, *args)
