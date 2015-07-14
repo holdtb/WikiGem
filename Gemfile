@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'pry'
+gem 'pry-byebug'
+gem 'rspec'
+gem 'rspec-core'
+gem 'thor'
+gem 'rest-client'
