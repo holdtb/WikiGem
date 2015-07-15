@@ -5,7 +5,8 @@ class WikiGem < Thor
 
   desc "summary", "Get the summary text from a wikipedia page"
   def summary(*search)
-    WikiSearch.find(search)
+    text = WikiSearch.find(search)
+    WikiPrinter.print(search, text)
   end
 
   def method_missing(method, *args)
