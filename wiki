@@ -1,5 +1,6 @@
 require 'thor'
-require_relative './lib/WikiSearch'
+require_relative './lib/wiki_search'
+require_relative './lib/wiki_printer'
 class WikiGem < Thor
   default_task :summary
 

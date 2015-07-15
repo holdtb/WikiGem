@@ -1,7 +1,7 @@
-require_relative 'WikiParser'
-require_relative 'WikiGetter'
-require_relative 'SearchPrimer'
-require_relative 'WikiPrinter'
+require_relative 'wiki_parser'
+require_relative 'wiki_getter'
+require_relative 'search_primer'
+require_relative 'wiki_printer'
 
 class WikiSearch
   def self.find(search)
